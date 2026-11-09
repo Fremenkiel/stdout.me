@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"io/fs"
 	"log/slog"
 	"net/http"
 	"os"
@@ -11,15 +12,16 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/internal/database"
-	"github.com/fremenkiel/stdout.cv/internal/platform/logger"
-	"github.com/fremenkiel/stdout.cv/internal/platform/middleware"
-	"github.com/fremenkiel/stdout.cv/internal/query"
-	"github.com/fremenkiel/stdout.cv/internal/registry"
-	"github.com/fremenkiel/stdout.cv/internal/schema"
-	"github.com/fremenkiel/stdout.cv/internal/session"
-	"github.com/fremenkiel/stdout.cv/internal/ui"
-	"github.com/fremenkiel/stdout.cv/pkg/dotenv"
+	"github.com/fremenkiel/stdout.me/internal/database"
+	"github.com/fremenkiel/stdout.me/internal/platform/logger"
+	"github.com/fremenkiel/stdout.me/internal/platform/middleware"
+	"github.com/fremenkiel/stdout.me/internal/query"
+	"github.com/fremenkiel/stdout.me/internal/registry"
+	"github.com/fremenkiel/stdout.me/internal/schema"
+	"github.com/fremenkiel/stdout.me/internal/session"
+	"github.com/fremenkiel/stdout.me/internal/ui"
+	"github.com/fremenkiel/stdout.me/pkg/dotenv"
+	uifs "github.com/fremenkiel/stdout.me/ui"
 )
 
 func main() {
@@ -33,9 +35,9 @@ func main() {
 			)
 	}
 
-	_, err := os.Stat("/tmp/stdout_cv_sessions")
+	_, err := os.Stat("/tmp/stdout_me_sessions")
 	if err != nil {
-		if err := os.MkdirAll("/tmp/stdout_cv_sessions", os.ModePerm); err != nil {
+		if err := os.MkdirAll("/tmp/stdout_me_sessions", os.ModePerm); err != nil {
 			logger.LogFatal(
 				"main",
 				"unable to create tmp folder",
@@ -68,8 +70,13 @@ func main() {
 
 	sessionMiddleware := session.Middleware(sessionService)
 
-	mux.Handle("/scripts/", http.StripPrefix("/scripts/", http.FileServer(http.Dir("./ui/static/scripts"))))
-	mux.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("./ui/static/styles"))))
+	staticFiles, err := fs.Sub(uifs.Files, "static")
+  if err != nil {
+          logger.LogFatal("main", "unable to load static files", slog.Any("error", err))
+  }
+  mux.Handle("/scripts/", http.FileServer(http.FS(staticFiles)))
+  mux.Handle("/styles/", http.FileServer(http.FS(staticFiles)))
+  mux.Handle("/images/", http.FileServer(http.FS(staticFiles)))
 
 	requireHtml := middleware.EnforceAccept("text/html")
 

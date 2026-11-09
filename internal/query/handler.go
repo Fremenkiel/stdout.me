@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/internal/database"
-	"github.com/fremenkiel/stdout.cv/internal/platform/lib"
-	"github.com/fremenkiel/stdout.cv/internal/platform/logger"
-	"github.com/fremenkiel/stdout.cv/internal/registry"
-	"github.com/fremenkiel/stdout.cv/internal/schema"
-	"github.com/fremenkiel/stdout.cv/internal/ui/viewmodels"
+	"github.com/fremenkiel/stdout.me/internal/database"
+	"github.com/fremenkiel/stdout.me/internal/platform/lib"
+	"github.com/fremenkiel/stdout.me/internal/platform/logger"
+	"github.com/fremenkiel/stdout.me/internal/registry"
+	"github.com/fremenkiel/stdout.me/internal/schema"
+	"github.com/fremenkiel/stdout.me/internal/ui/viewmodels"
 )
 
 type renderer interface {

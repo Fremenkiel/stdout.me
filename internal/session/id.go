@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/fremenkiel/stdout.cv/internal/platform/consts"
+	"github.com/fremenkiel/stdout.me/internal/platform/consts"
 )
 
 var ErrNoSessionInContext = errors.New("No session id found in context")

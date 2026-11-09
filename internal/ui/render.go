@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"github.com/fremenkiel/stdout.cv/ui"
+	"github.com/fremenkiel/stdout.me/ui"
 )
 
 type Renderer struct {

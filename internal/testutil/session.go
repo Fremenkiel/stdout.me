@@ -10,8 +10,8 @@ import (
 	"time"
 	"uuid"
 
-	"github.com/fremenkiel/stdout.cv/db"
-	"github.com/fremenkiel/stdout.cv/internal/platform/consts"
+	"github.com/fremenkiel/stdout.me/db"
+	"github.com/fremenkiel/stdout.me/internal/platform/consts"
 )
 
 // Service

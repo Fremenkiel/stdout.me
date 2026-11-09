@@ -3,7 +3,7 @@ package database
 import (
 	"context"
 
-	"github.com/fremenkiel/stdout.cv/internal/session"
+	"github.com/fremenkiel/stdout.me/internal/session"
 )
 
 type sessionService interface {

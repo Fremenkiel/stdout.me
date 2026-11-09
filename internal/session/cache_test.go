@@ -9,7 +9,7 @@ import (
 	"testing/synctest"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestAddSession(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/internal/interpreter"
-	"github.com/fremenkiel/stdout.cv/internal/ui/viewmodels"
+	"github.com/fremenkiel/stdout.me/internal/interpreter"
+	"github.com/fremenkiel/stdout.me/internal/ui/viewmodels"
 	"modernc.org/sqlite"
 	"modernc.org/sqlite/lib"
 )

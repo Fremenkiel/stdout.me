@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 	"modernc.org/sqlite"
 	sqlite3 "modernc.org/sqlite/lib"
 )

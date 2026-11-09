@@ -3,11 +3,11 @@ package query
 import (
 	"context"
 
-	"github.com/fremenkiel/stdout.cv/internal/database"
-	"github.com/fremenkiel/stdout.cv/internal/interpreter"
-	"github.com/fremenkiel/stdout.cv/internal/platform/lib"
-	"github.com/fremenkiel/stdout.cv/internal/registry"
-	"github.com/fremenkiel/stdout.cv/internal/schema"
+	"github.com/fremenkiel/stdout.me/internal/database"
+	"github.com/fremenkiel/stdout.me/internal/interpreter"
+	"github.com/fremenkiel/stdout.me/internal/platform/lib"
+	"github.com/fremenkiel/stdout.me/internal/registry"
+	"github.com/fremenkiel/stdout.me/internal/schema"
 )
 
 type repository interface {

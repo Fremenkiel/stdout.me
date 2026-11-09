@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestGetStats(t *testing.T) {

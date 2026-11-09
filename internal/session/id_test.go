@@ -6,7 +6,7 @@ import (
 
 	"uuid"
 
-	"github.com/fremenkiel/stdout.cv/internal/platform/consts"
+	"github.com/fremenkiel/stdout.me/internal/platform/consts"
 )
 
 func TestNewContext(t *testing.T) {

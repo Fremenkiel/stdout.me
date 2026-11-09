@@ -3,7 +3,7 @@ package query
 import (
 	"testing"
 
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestGetAll(t *testing.T) {

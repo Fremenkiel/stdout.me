@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestNewRouter(t *testing.T) {

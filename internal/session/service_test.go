@@ -8,7 +8,7 @@ import (
 	"testing/synctest"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 	"uuid"
 )
 
@@ -354,9 +354,9 @@ func createTestFile(name string) error {
 }
 
 func ensureFolder() error {
-	_, err := os.Stat("/tmp/stdout_cv_sessions")
+	_, err := os.Stat("/tmp/stdout_me_sessions")
 	if err != nil {
-		if err := os.MkdirAll("/tmp/stdout_cv_sessions", os.ModePerm); err != nil {
+		if err := os.MkdirAll("/tmp/stdout_me_sessions", os.ModePerm); err != nil {
 			return err
 		}
 	}

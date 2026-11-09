@@ -3,8 +3,8 @@ package schema
 import (
 	"testing"
 
-	"github.com/fremenkiel/stdout.cv/internal/session"
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/session"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestRepositoryGetSchema(t *testing.T) {

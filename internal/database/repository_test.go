@@ -3,7 +3,7 @@ package database
 import (
 	"testing"
 
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestGetVersion(t *testing.T) {

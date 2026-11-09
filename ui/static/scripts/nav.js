@@ -40,7 +40,6 @@ function updateNavState() {
 }
 
 function trackNavStateChange(el) {
-  console.log("tracked", el.open);
   if (!el.open) {
     localStorage.setItem(getStorageKey(el.id), 1);
   } else {
@@ -50,7 +49,6 @@ function trackNavStateChange(el) {
 
 function ensureNavOpenState(persistantState) {
   for (var state in persistantState) {
-    console.log(state, typeof persistantState[state], persistantState[state]);
     document.getElementById(state).open = persistantState[state];
   }
 }
@@ -58,7 +56,6 @@ function ensureNavOpenState(persistantState) {
 document.addEventListener('DOMContentLoaded', () => {
   document.body.addEventListener('htmx:afterSwap', (evt) => {
     if (evt.target.id === "nav") {
-      console.log(evt);
       updateNavState();
     }
   });

@@ -9,8 +9,8 @@ import (
 
 	"uuid"
 
-	"github.com/fremenkiel/stdout.cv/internal/platform/consts"
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/platform/consts"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestHandle(t *testing.T) {

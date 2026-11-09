@@ -1,3 +1,2 @@
 - Simplify tests
-- Fill out database
 - Comment

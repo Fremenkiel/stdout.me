@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/fremenkiel/stdout.cv/internal/session"
+	"github.com/fremenkiel/stdout.me/internal/session"
 	_ "modernc.org/sqlite"
 )
 

@@ -3,7 +3,7 @@ package query
 import (
 	"net/http"
 
-	"github.com/fremenkiel/stdout.cv/internal/platform/middleware"
+	"github.com/fremenkiel/stdout.me/internal/platform/middleware"
 )
 
 func NewRouter(mux *http.ServeMux, handler *Handler, middlewares ...func(http.Handler) http.Handler) {

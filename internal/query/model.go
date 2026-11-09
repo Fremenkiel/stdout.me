@@ -1,9 +1,9 @@
 package query
 
 import (
-	"github.com/fremenkiel/stdout.cv/internal/database"
-	"github.com/fremenkiel/stdout.cv/internal/registry"
-	"github.com/fremenkiel/stdout.cv/internal/schema"
+	"github.com/fremenkiel/stdout.me/internal/database"
+	"github.com/fremenkiel/stdout.me/internal/registry"
+	"github.com/fremenkiel/stdout.me/internal/schema"
 )
 
 type Query struct {

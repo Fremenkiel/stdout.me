@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"net/http"
 
-	"github.com/fremenkiel/stdout.cv/internal/ui"
+	"github.com/fremenkiel/stdout.me/internal/ui"
 )
 
 type Renderer struct {

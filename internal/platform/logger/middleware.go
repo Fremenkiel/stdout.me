@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/internal/platform/metrics"
+	"github.com/fremenkiel/stdout.me/internal/platform/metrics"
 )
 
 func LogRequestHandler(h http.Handler) http.Handler {

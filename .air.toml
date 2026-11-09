@@ -5,7 +5,7 @@ tmp_dir = "tmp"
 [build]
   args_bin = []
   entrypoint = "APP_ENV=development ./tmp/main"
-  cmd = "go build -o ./tmp/main ./cmd/main.go"
+  cmd = "go build -o ./tmp/main ./cmd/api/main.go"
   delay = 0
   exclude_dir = ["node_modules", "assets", "tmp", "vendor", "testdata"]
   exclude_file = []

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/db"
-	"github.com/fremenkiel/stdout.cv/internal/platform/logger"
+	"github.com/fremenkiel/stdout.me/db"
+	"github.com/fremenkiel/stdout.me/internal/platform/logger"
 	"uuid"
 )
 

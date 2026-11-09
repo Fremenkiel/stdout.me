@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/fremenkiel/stdout.cv/internal/database"
-	"github.com/fremenkiel/stdout.cv/internal/registry"
-	"github.com/fremenkiel/stdout.cv/internal/schema"
-	"github.com/fremenkiel/stdout.cv/internal/session"
-	"github.com/fremenkiel/stdout.cv/internal/testutil"
+	"github.com/fremenkiel/stdout.me/internal/database"
+	"github.com/fremenkiel/stdout.me/internal/registry"
+	"github.com/fremenkiel/stdout.me/internal/schema"
+	"github.com/fremenkiel/stdout.me/internal/session"
+	"github.com/fremenkiel/stdout.me/internal/testutil"
 )
 
 func TestServiceRun(t *testing.T) {

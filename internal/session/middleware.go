@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/fremenkiel/stdout.cv/internal/platform/consts"
-	"github.com/fremenkiel/stdout.cv/internal/platform/logger"
+	"github.com/fremenkiel/stdout.me/internal/platform/consts"
+	"github.com/fremenkiel/stdout.me/internal/platform/logger"
 )
 
 type service interface {
