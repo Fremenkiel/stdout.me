@@ -73,17 +73,19 @@ func (s *Service) StartCleanupWorker(ctx context.Context, interval time.Duration
 		ticker := time.NewTicker(interval)
 		defer ticker.Stop()
 
-		select {
-		case <-ticker.C:
-			if err := s.RemoveExpiredSessions(); err != nil {
-				logger.LogError(
-					"session/service",
-					"error thrown while removing expired sessions",
-					slog.Any("error", err),
-					)
+		for {
+			select {
+			case <-ticker.C:
+				if err := s.RemoveExpiredSessions(); err != nil {
+					logger.LogError(
+						"session/service",
+						"error thrown while removing expired sessions",
+						slog.Any("error", err),
+						)
+				}
+			case <-ctx.Done():
+				return
 			}
-		case <-ctx.Done():
-			return
 		}
 	}()
 }

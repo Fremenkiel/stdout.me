@@ -26,6 +26,4 @@ USER nonroot:nonroot
 
 EXPOSE 8080
 
-ENV APP_ENV=production
-ENV PORT=8080
 ENTRYPOINT ["/go-app"]

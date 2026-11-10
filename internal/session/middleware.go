@@ -82,7 +82,7 @@ func setCookie(w http.ResponseWriter, id string) {
 		Name:     consts.CookieKey,
 		Value:    id,
 		Path:     "/",
-		MaxAge:   int(5*time.Minute),
+		MaxAge:   int((5*time.Minute).Seconds()),
 		HttpOnly: true,
 	})
 }
