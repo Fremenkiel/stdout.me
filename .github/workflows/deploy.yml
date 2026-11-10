@@ -1,0 +1,54 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  REGISTRY: rg.pl-waw.scw.cloud/namespace-nostalgic-goodall
+  IMAGE_NAME: stdout.me
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Run tests
+        run: go test ./...
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to Scaleway registry
+        env:
+          SCW_SECRET_KEY: ${{ secrets.SCW_SECRET_KEY }}
+        run: docker login "$REGISTRY" -u nologin --password-stdin <<< "$SCW_SECRET_KEY"
+
+      - name: Build image
+        run: |
+          docker build \
+            -t "$REGISTRY/$IMAGE_NAME:${GITHUB_SHA::7}" \
+            -t "$REGISTRY/$IMAGE_NAME:latest" \
+            .
+
+      - name: Push image
+        run: |
+          docker push "$REGISTRY/$IMAGE_NAME:${GITHUB_SHA::7}"
+          docker push "$REGISTRY/$IMAGE_NAME:latest"
+
+      - name: Log out of registry
+        if: always()
+        run: docker logout "$REGISTRY"
