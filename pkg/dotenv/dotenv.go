@@ -54,10 +54,13 @@ func loadFile(filename string, overload bool) error {
 	return nil
 }
 
-func readFile(filename string) (envMap map[string]string, err error) {
+func readFile(filename string) (map[string]string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
-		return
+		if os.IsNotExist(err) {
+			return nil, nil
+		}
+		return nil, err
 	}
 	defer file.Close()
 

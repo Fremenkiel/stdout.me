@@ -8,6 +8,7 @@ p, span {
 
 h1 {
   font-size: var(--font-size-header);
+  line-height: var(--font-size-header);
   color: var(--color-text-primary);
 }
 

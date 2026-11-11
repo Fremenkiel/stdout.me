@@ -10,7 +10,7 @@
 }
 
 .schema__header:hover {
-  background-color: var(--color-background-primary-hover);
+  background-color: var(--color-background-secondary-hover);
 }
 
 .schema[open] .schema__header {

@@ -6,6 +6,12 @@
   align-items: center;
 }
 
+.nav__title {
+  display: flex;
+  align-items: end;
+  gap: var(--size-margin-x)
+}
+
 .nav__subtitle {
   margin: 6px var(--size-nav-margin-x);
 }

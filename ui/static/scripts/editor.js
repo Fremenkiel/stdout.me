@@ -99,3 +99,11 @@ function ResetErrorSnippet(el) {
     el.childNodes[i].remove();
   }
 }
+
+function SwitchKeyMap(element) {
+  const isVim = element.value === "true";
+
+  editor.setOption("keyMap", isVim ? "default" : "vim");
+
+  element.value = String(!isVim);
+}

@@ -8,7 +8,7 @@
 }
 
 .query__submit {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 14px;
 }
@@ -19,4 +19,13 @@
   stroke: var(--color-text-contrast);
   fill: var(--color-text-contrast);
   margin-right: 6px;
+}
+
+.query__toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 14px;
+  padding: 8px;
+  height: 32px;
+  width: 32px;
 }

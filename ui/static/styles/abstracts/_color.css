@@ -3,9 +3,10 @@ body {
   --color-primary-hover: #355fcd;
 
   --color-background-primary: #fff;
-  --color-background-primary-hover: #eef0f4;
 
   --color-background-secondary: #f7f8fa;
+  --color-background-secondary-hover: #eef0f4;
+
   --color-background-error: #F9E3E2;
 
   --color-active: #ebf1fd;

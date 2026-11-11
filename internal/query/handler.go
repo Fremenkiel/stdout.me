@@ -4,6 +4,7 @@ import (
 	"context"
 	"log/slog"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/fremenkiel/stdout.me/internal/database"
@@ -224,8 +225,11 @@ func (h *Handler) getStatsViewData(stats *database.Stats) *viewmodels.Stats {
 		return nil
 	}
 
+	version := os.Getenv("VERSION")
+
 	return &viewmodels.Stats{
-		Version: stats.Version,
+		Version: version,
+		SqliteVersion: stats.Version,
 		Size: stats.Size,
 	}
 }

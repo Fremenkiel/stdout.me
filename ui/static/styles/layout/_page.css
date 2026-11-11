@@ -15,6 +15,7 @@
 }
 
 .page__query {
+  position: relative;
   grid-area: query;
 }
 

@@ -16,5 +16,6 @@ type Table struct {
 
 type Stats struct {
 	Version	string
+	SqliteVersion	string
 	Size		float64
 }

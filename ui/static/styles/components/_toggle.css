@@ -1,0 +1,22 @@
+.toggle {
+  font-weight: 500;
+  border: 0;
+  border-radius: var(--size-border-radius);
+  cursor: pointer;
+}
+
+.toggle[value="true"] {
+  background-color: var(--color-active);
+  color: var(--color-primary);
+}
+
+.toggle[value="false"] {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+}
+
+.toggle:hover {
+  background-color: var(--color-background-secondary-hover);
+  color: var(--color-text-primary);
+}
+
